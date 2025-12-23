@@ -1,0 +1,47 @@
+[
+  {
+    "scene": "scene_01_tease",
+    "prompt_id": "4699c857-461f-4fbf-a690-266888c118af",
+    "positive": "AMBER6, adult woman, close-up face, blue eyes, auburn bob hair, sheer robe open, topless, nipples visible, seated on bed, soft warm light, eye contact, teasing smile",
+    "negative": "lowres, blurry, pixelated, jpeg artifacts, bad anatomy, bad proportions, out of frame, cropped face, missing limbs, extra limbs, underage, teen, child, multiple men, gangbang",
+    "images": [
+      "generated\\amber_story\\amber_story_01_00001_.png"
+    ]
+  },
+  {
+    "scene": "scene_02_undress",
+    "prompt_id": "e516e215-d99a-45db-8b2c-98fb552cadbb",
+    "positive": "AMBER6, adult woman, nude, close-up face, flushed cheeks, hand on breast, lying on bed, legs slightly parted, soft daylight, intimate portrait",
+    "negative": "lowres, blurry, pixelated, jpeg artifacts, bad anatomy, bad proportions, out of frame, cropped face, missing limbs, extra limbs, underage, teen, child, multiple men, gangbang",
+    "images": [
+      "generated\\amber_story\\amber_story_02_00001_.png"
+    ]
+  },
+  {
+    "scene": "scene_03_oral",
+    "prompt_id": "2b72928d-20d0-414f-a6e2-290dfeecb590",
+    "positive": "AMBER6, adult woman, nude, close-up face, kneeling on bed, oral sex with male partner, penis near lips, hand on shaft, eye contact, warm bedroom light",
+    "negative": "lowres, blurry, pixelated, jpeg artifacts, bad anatomy, bad proportions, out of frame, cropped face, missing limbs, extra limbs, underage, teen, child, multiple men, gangbang",
+    "images": [
+      "generated\\amber_story\\amber_story_03_00001_.png"
+    ]
+  },
+  {
+    "scene": "scene_04_sex",
+    "prompt_id": "46d3e7fa-2e52-4b0a-97a4-a6bcf0ffe258",
+    "positive": "AMBER6, adult woman, nude, close-up face, riding male partner, vaginal sex, hair slightly messy, moaning expression, tight framing, soft warm light",
+    "negative": "lowres, blurry, pixelated, jpeg artifacts, bad anatomy, bad proportions, out of frame, cropped face, missing limbs, extra limbs, underage, teen, child, multiple men, gangbang",
+    "images": [
+      "generated\\amber_story\\amber_story_04_00001_.png"
+    ]
+  },
+  {
+    "scene": "scene_05_afterglow",
+    "prompt_id": "29ef5d9f-46f7-440f-b0b7-50fda44fca9b",
+    "positive": "AMBER6, adult woman, nude, close-up face, lying on bed, relaxed smile, soft sweat on skin, gentle eye contact, warm ambient light, post-sex glow",
+    "negative": "lowres, blurry, pixelated, jpeg artifacts, bad anatomy, bad proportions, out of frame, cropped face, missing limbs, extra limbs, underage, teen, child, multiple men, gangbang",
+    "images": [
+      "generated\\amber_story\\amber_story_05_00001_.png"
+    ]
+  }
+]
