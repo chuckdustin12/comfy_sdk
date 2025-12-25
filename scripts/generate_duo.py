@@ -10,6 +10,7 @@ from comfy_sdk import ComfyClient, generate_from_workflow
 
 BASE_URL = os.environ.get("COMFY_URL", "http://localhost:8000/")
 OUTPUT_DIR = Path("generated/amber_caitlin")
+CKPT_NAME = "illustriousMixedCGI_v20.safetensors"
 
 LORAS = [
     {
@@ -55,6 +56,7 @@ def main() -> int:
             client=client,
             positive=POSITIVE_PROMPT,
             negative=NEGATIVE_PROMPT,
+            ckpt_name=CKPT_NAME,
             loras=LORAS,
             seed=SEED,
             steps=50,

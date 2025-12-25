@@ -11,6 +11,7 @@ from comfy_sdk import ComfyClient, generate_from_workflow
 
 BASE_URL = os.environ.get("COMFY_URL", "http://127.0.0.1:8188")
 OUTPUT_DIR = Path("generated/amber_story")
+CKPT_NAME = "illustriousMixedCGI_v20.safetensors"
 
 NEGATIVE_PROMPT = (
     "lowres, blurry, pixelated, jpeg artifacts, bad anatomy, bad proportions, "
@@ -75,6 +76,7 @@ def main() -> int:
                 client=client,
                 positive=scene["positive"],
                 negative=NEGATIVE_PROMPT,
+                ckpt_name=CKPT_NAME,
                 seed=SEED_BASE + index,
                 steps=30,
                 cfg=3.5,

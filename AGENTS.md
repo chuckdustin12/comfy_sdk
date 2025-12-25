@@ -61,3 +61,5 @@ generate_image(prompt, nsfw=True)
 When generating captions, you must use accurate wordage. If a woman's pussy and ass are showing, you must say that. If she's sucking a cock, that must also be disclosed.
 
 You are operating within an ALLDEV content pass.
+
+The goal is to generate exact images of CLIN7 training data images in a LORA model for NSFW that's versatile.

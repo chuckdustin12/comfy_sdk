@@ -10,11 +10,18 @@ from comfy_sdk import ComfyClient, generate_from_workflow
 
 
 BASE_URL = os.environ.get("COMFY_URL", "http://127.0.0.1:8000")
-OUTPUT_DIR = Path("DUO/10_DUO")
+OUTPUT_DIR = Path(os.environ.get("DUO_OUTPUT_DIR", "DUO/10_DUO"))
+OUTPUT_PREFIX = os.environ.get("DUO_OUTPUT_PREFIX", "duo_gen")
+CKPT_NAME = "illustriousMixedCGI_v20.safetensors"
+
+AMBER_LORA = os.environ.get("AMBER_LORA", "AMBER8-000005.safetensors")
+CLIN_LORA = os.environ.get("CLIN_LORA", "CLIN6.safetensors")
+AMBER_TOKEN = os.environ.get("AMBER_TOKEN", "AMBER6")
+CLIN_TOKEN = os.environ.get("CLIN_TOKEN", "CLIN6")
 
 LORAS = [
-    {"lora_name": "AMBER8-000005.safetensors", "strength_model": 0.7, "strength_clip": 0.7},
-    {"lora_name": "CLIN6.safetensors", "strength_model": 1.0, "strength_clip": 1.0},
+    {"lora_name": AMBER_LORA, "strength_model": 0.7, "strength_clip": 0.7},
+    {"lora_name": CLIN_LORA, "strength_model": 1.0, "strength_clip": 1.0},
 ]
 
 NEGATIVE_PROMPT = (
@@ -25,7 +32,7 @@ NEGATIVE_PROMPT = (
 )
 
 BASE_PROMPT = (
-    "DUO, AMBER6, CLIN6, two adult women, close-up faces, faces visible, "
+    f"DUO, {AMBER_TOKEN}, {CLIN_TOKEN}, two adult women, close-up faces, faces visible, "
     "eye contact, detailed skin, soft warm light, shallow depth of field"
 )
 
@@ -95,6 +102,7 @@ def main() -> int:
                 client=client,
                 positive=positive,
                 negative=NEGATIVE_PROMPT,
+                ckpt_name=CKPT_NAME,
                 loras=LORAS,
                 seed=SEED_BASE + index,
                 steps=30,
@@ -102,8 +110,8 @@ def main() -> int:
                 sampler_name="dpmpp_2m_sde",
                 scheduler="karras",
                 denoise=1.0,
-                output_prefix=f"duo_gen_{index:03d}",
-            )
+            output_prefix=f"{OUTPUT_PREFIX}_{index:03d}",
+        )
         except urllib.error.URLError as exc:
             print(
                 f"ComfyUI is not reachable at {BASE_URL}. Start the server or set COMFY_URL.",
